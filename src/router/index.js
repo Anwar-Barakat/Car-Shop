@@ -43,4 +43,13 @@ const router = new VueRouter({
   routes,
 });
 
+router.beforeEach((to, from, next) => {
+  let documentTitle = `${process.env.VUE_APP_TITLE}`;
+  if (to.params.pageTitle) {
+    documentTitle += ` | ${to.params.pageTitle}`;
+  }
+  document.title = documentTitle;
+  next();
+});
+
 export default router;
