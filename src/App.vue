@@ -1,12 +1,23 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
+    <div id="app" class="container">
+      <MainMenu />
+    </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import MainMenu from "@/components/navbar/Navbar.vue";
+
+const components = {
+  MainMenu,
+};
+
+export default {
+  components: components,
+};
+</script>
 
 <style lang="scss">
 #app {

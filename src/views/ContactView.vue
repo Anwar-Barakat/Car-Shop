@@ -1,11 +1,11 @@
 <template>
-  <div class="about">
+  <div class="contact">
     <div class="container"></div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "AboutView",
+  name: "ContactView",
 };
 </script>
