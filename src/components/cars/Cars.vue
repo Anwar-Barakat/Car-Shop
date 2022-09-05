@@ -1,15 +1,21 @@
 <template>
   <div class="row justify-content-evenly">
-    <div class="col-md-6 col-lg-4">
+    <div
+      class="col-md-6 col-lg-4 mb-4"
+      v-for="(car, index) in carsInfo"
+      :key="index"
+    >
       <div class="card" style="width: 18rem">
         <img
-          src="@/assets/Ferrari/ferrari (1).jpg"
+          :src="getImageURL(car.name, car.mainImage)"
           class="card-img-top"
           alt="..."
         />
         <div class="card-body">
-          <h5 class="card-title">Ferrari</h5>
-          <p class="card-text">300.000,00 $</p>
+          <h5 class="card-title">
+            {{ car.name.toUpperCase() }} | {{ car.model }}
+          </h5>
+          <p class="card-text">{{ car.price }}</p>
           <router-link :to="{ name: 'home' }">
             <button type="button" class="btn btn-primary">Read More</button>
           </router-link>
@@ -22,6 +28,18 @@
 <script>
 export default {
   name: "CarsVue",
+  data() {
+    return {
+      carsInfo: this.$attrs.carsData,
+    };
+  },
+  methods: {
+    getImageURL(foldername, filename) {
+      // let image = require.context("@/assets/");
+      // return image("./" + foldername + "/" + filename);
+      return require("@/assets/" + foldername + "/" + filename);
+    },
+  },
 };
 </script>
 
