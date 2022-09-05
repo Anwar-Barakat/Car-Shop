@@ -3,12 +3,12 @@
     <nav class="nav flex-column sidebar-nav">
       <router-link :to="{ name: 'about' }">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Honda</a>
+          <a class="nav-link active" href="#">BMW</a>
         </li>
       </router-link>
       <router-link :to="{ name: 'about' }">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Toyota</a>
+          <a class="nav-link active" href="#">Honda</a>
         </li>
       </router-link>
       <router-link :to="{ name: 'about' }">
@@ -18,12 +18,12 @@
       </router-link>
       <router-link :to="{ name: 'about' }">
         <li class="nav-item">
-          <a class="nav-link active" href="#">BMW</a>
+          <a class="nav-link active" href="#">Toyota</a>
         </li>
       </router-link>
       <router-link :to="{ name: 'about' }">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Chev</a>
+          <a class="nav-link active" href="#">Ferrari</a>
         </li>
       </router-link>
     </nav>
@@ -54,7 +54,6 @@ a {
   text-decoration: none;
 }
 .sidebar-nav {
-  margin-top: 1rem;
   text-align: left;
   li {
     padding: 5px 10px 5px 0;
